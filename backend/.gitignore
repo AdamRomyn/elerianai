@@ -1,0 +1,18 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore build output
+dist/
+build/
+
+# Ignore environment-specific files
+.env
+
+# Ignore npm debug log
+npm-debug.log*
+
+# Ignore TypeScript build output
+*.tsbuildinfo
+
+# Ignore any local development configurations
+config/*.local.*

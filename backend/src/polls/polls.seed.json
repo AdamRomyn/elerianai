@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "question": "What is your favorite programming language?",
+    "answers": [
+      {
+        "answer": "Python",
+        "votes": 0
+      },
+      {
+        "answer": "Go",
+        "votes": 0
+      },
+      {
+        "answer": "Rust",
+        "votes": 0
+      },
+      {
+        "answer": "C++",
+        "votes": 0
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "question": "What is your favorite color?",
+    "answers": [
+      {
+        "answer": "Red",
+        "votes": 0
+      },
+      {
+        "answer": "Green",
+        "votes": 0
+      },
+      {
+        "answer": "Blue",
+        "votes": 0
+      },
+      {
+        "answer": "Yellow",
+        "votes": 0
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "question": "What is your favorite food?",
+    "answers": [
+      {
+        "answer": "Pizza",
+        "votes": 0
+      },
+      {
+        "answer": "Burger",
+        "votes": 0
+      },
+      {
+        "answer": "Pasta",
+        "votes": 0
+      },
+      {
+        "answer": "Sushi",
+        "votes": 0
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "question": "What is your favorite animal?",
+    "answers": [
+      {
+        "answer": "Dog",
+        "votes": 0
+      },
+      {
+        "answer": "Cat",
+        "votes": 0
+      },
+      {
+        "answer": "Bird",
+        "votes": 0
+      },
+      {
+        "answer": "Fish",
+        "votes": 0
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "question": "What is your favorite movie?",
+    "answers": [
+      {
+        "answer": "The Shawshank Redemption",
+        "votes": 0
+      },
+      {
+        "answer": "The Godfather",
+        "votes": 0
+      },
+      {
+        "answer": "The Dark Knight",
+        "votes": 0
+      },
+      {
+        "answer": "Pulp Fiction",
+        "votes": 0
+      }
+    ]
+  }
+]

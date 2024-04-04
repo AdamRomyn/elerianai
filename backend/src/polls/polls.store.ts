@@ -1,0 +1,3 @@
+export var pollsStore = {
+    polls: []
+}
