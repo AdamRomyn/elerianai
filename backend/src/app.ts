@@ -4,7 +4,7 @@ import * as cors from 'cors';
 import { pollsStore } from './polls/polls.store';
 import * as pollSeedData from './polls/polls.seed.json';
 
-const port = 3000;
+const port = 3000;  
 const app = express();
 
 // Middlware

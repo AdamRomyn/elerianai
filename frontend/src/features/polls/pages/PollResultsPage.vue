@@ -1,12 +1,17 @@
 <template>
-    <div>
+    <PageContent>
+        <div class="block flex justify-between">
+            <h1 class="text-3xl font-bold">Poll Results</h1>
+        </div>
         <h2>Question: {{ poll.question }}</h2>
         <h3>Results</h3>
-        <div v-for="(option, index) in poll.answers" :key="index">
-            <div>{{ option.answer.text }} {{ option.votes }}</div>
+        <div class="flex">
+            <div class="w-1/2">
+
+                <Pie v-if="loaded" :data="pieChart.data" />
+            </div>
         </div>
-        <Pie v-if="loaded" :data="pieChart.data" />
-    </div>
+    </PageContent>
 </template>
 
 <script>
@@ -14,13 +19,15 @@ import pollService from '@/features/polls/services/pollService';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js'
 import { Pie } from 'vue-chartjs'
 import { ref } from 'vue'
+import PageContent from '@/shared/components/PageContent.vue'
 
 
 ChartJS.register(ArcElement, Tooltip, Legend)
 export default {
     name: 'PieChart',
     components: {
-        Pie
+        Pie,
+        PageContent
     },
     setup() {
         const loaded = ref(false);
@@ -61,7 +68,7 @@ export default {
                     const pieChart = this.pieChart;
                     this.poll.answers.forEach((answer) => {
                         console.log(answer);
-                        pieChart.data.labels.push(answer.answer.text);
+                        pieChart.data.labels.push(answer.answer);
                         pieChart.data.datasets[0].data.push(answer.votes);
                         const color = this.getRandomColor();
                         pieChart.data.datasets[0].backgroundColor.push(color);

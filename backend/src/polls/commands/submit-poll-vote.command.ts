@@ -16,7 +16,7 @@ export const submitPollVoteCommand = async (req: Request, res: Response) => {
         if (!poll) {
             return res.status(404).send({ message: "Poll not found" })
         }
-        const answer = poll.answers.find(answer => answer.value == req.body.answer)
+        const answer = poll.answers.find(answer => answer.answer == req.body.answer)
         if (!answer) {
             return res.status(400).send({ message: "Answer not found" })
         }

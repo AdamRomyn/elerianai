@@ -2,7 +2,7 @@ export interface Poll {
     id: number;
     question: string;
     answers: Array<{
-        value: string;
+        answer: string;
         votes: number;
     }>;
 }

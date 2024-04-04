@@ -7,8 +7,7 @@ import { Request, Response } from "express";
 export const createPollValidator = Joi.object<Poll>().keys({
     question: Joi.string().required(),
     answers: Joi.array().items(Joi.object().keys({
-        value: Joi.string().required(),
-        votes: Joi.number().required()
+        answer: Joi.string().required()
     }))
 });
 
@@ -20,7 +19,8 @@ export const createPollCommand = async (req: Request, res: Response) => {
         if (error) {
             return res.status(400).send({ message: error.details[0].message });
         }
-        const poll = req.body as Poll;
+        let poll = req.body as Poll;
+        poll.answers = poll.answers.map(a => ({votes: 0, answer: a.answer}));
         poll.id = pollsStore.polls.length + 1;
 
         pollsStore.polls.push(poll);
